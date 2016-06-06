@@ -1,4 +1,11 @@
-# Auto install Shadowsocks Server
+# 所有shadowsocks分支一键安装脚本 
+
+感谢teddysun大神的一键脚本，感谢B大开发对shadowsocks-R项目的开发，感谢shadowsocks原作者对互联网的贡献，本项目只作为个人自用项目，对部分内容作出下列修改：
+*默认加密为：rc4-md5
+*默认协议为：auth_sha1_compatible
+*默认混淆为：http_post_compatible（兼容http_simple,客户端可以直接用http_simple）
+*使用git的方式安装，以方便以后使用git来升级
+*增加了修改时区的操作。把时区设置成了北京-上海时间。
 
 shadowsocks.sh
 ===============
