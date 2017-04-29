@@ -218,7 +218,7 @@ function config_shadowsocks(){
 	"timeout": 600,
 	"udp_timeout": 120,
 	"method": "chacha20",
-	"protocol": "auth_sha1_v2_compatible",
+	"protocol": "auth_sha1_v4_compatible",
 	"protocol_param": "",
 	"obfs": "tls1.2_ticket_auth_compatible",
 	"obfs_param": "",
