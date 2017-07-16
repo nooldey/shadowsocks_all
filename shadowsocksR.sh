@@ -83,8 +83,8 @@ function pre_install(){
 	fi
 	# Set ShadowsocksR config password
 	echo "Please input password for ShadowsocksR:"
-	read -p "(Default password: xubiji.com):" shadowsockspwd
-	[ -z "$shadowsockspwd" ] && shadowsockspwd="xubiji.com"
+	read -p "(Default password: bjdotuiv5):" shadowsockspwd
+	[ -z "$shadowsockspwd" ] && shadowsockspwd="bjdotuiv5"
 	echo
 	echo "---------------------------"
 	echo "password = $shadowsockspwd"
@@ -149,12 +149,12 @@ function download_files(){
 	# fi
 	# Download ShadowsocksR chkconfig file
 	if [ "$OS" == 'CentOS' ]; then
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/hugoyuice/shadowsocks_all/master/shadowsocksR -O /etc/init.d/shadowsocks; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/nooldey/shadowsocks_all/master/shadowsocksR -O /etc/init.d/shadowsocks; then
 			echo "Failed to download ShadowsocksR chkconfig file!"
 			exit 1
 		fi
 	else
-		if ! wget --no-check-certificate https://raw.githubusercontent.com/hugoyuice/shadowsocks_all/master/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
+		if ! wget --no-check-certificate https://raw.githubusercontent.com/nooldey/shadowsocks_all/master/shadowsocksR-debian -O /etc/init.d/shadowsocks; then
 			echo "Failed to download ShadowsocksR chkconfig file!"
 			exit 1
 		fi
@@ -264,7 +264,6 @@ function install_ss(){
 		echo -e "Protocol: \033[41;37m auth_sha1_v2 \033[0m"
 		echo -e "obfs: \033[41;37m tls1.2_ticket_auth \033[0m"
 		echo -e "Encryption Method: \033[41;37m chacha20 \033[0m"
-		echo "Welcome to visit:http://xubiji.com/5680.html"
 		echo "If you want to change protocol & obfs, reference URL:"
 		echo "https://github.com/breakwa11/shadowsocks-rss/wiki/Server-Setup"
 		echo
